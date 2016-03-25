@@ -1,0 +1,19 @@
+body {
+	background : #F8F8F8;
+
+}
+
+@font-face {
+ font-family : test;
+ src: url('fonts/LeagueScriptNumberOne-webfont.ttf');	
+ src: url('fonts/LeagueScriptNumberOne-webfont.eot');
+}
+
+h1{
+	color : rgb(0,102,170);
+	font-family: trebuchet;
+}
+
+p {
+	font-family: test;
+}

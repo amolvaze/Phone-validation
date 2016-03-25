@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Validation phone number </title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/jquery.js"> </script>
+  <script type="text/javascript">
+
+  // phonefield 1 validation
+  function validatephone1(phone)
+  	{
+  		
+  		//phone = phone.replace(/[^0-9]/g,'');
+  		$("#phonefield1").val(phone);
+  		if( phone == '' || !phone.match(/^[^0][0-9]{2}$/) )
+  			{
+  				$("#phonefield1").css({'background':'#FFEDEF' , 'border':'solid 1px red'});
+  				$("#status").text("Wrong phone number.");
+				$("#status").css("color", "red");
+  				return false;
+  			}
+  		else
+  			{
+  				$("#phonefield1").css({'background':'#99FF99' , 'border':'solid 1px #99FF99'});
+				$("#status").text("Correct phone number.");
+				$("#status").css("color", "green");
+  			return true;	
+  			}
+  	}
+	
+	 // phonefield 2 validation
+  function validatephone2(phone)
+  	{
+  		
+  		//phone = phone.replace(/[^0-9]/g,'');
+  		$("#phonefield2").val(phone);
+  		if( phone == '' || !phone.match(/^[0-9][0-9]{2}$/) )
+  			{
+  				$("#phonefield2").css({'background':'#FFEDEF' , 'border':'solid 1px red'});
+  				$("#status").text("Wrong phone number.");
+				$("#status").css("color", "red");
+  				return false;
+  			}
+  		else
+  			{
+  				$("#phonefield2").css({'background':'#99FF99' , 'border':'solid 1px #99FF99'});
+				$("#status").text("Correct phone number.");
+				$("#status").css("color", "green");
+  			return true;	
+  			}
+  	}
+	
+	 // phonefield 3 validation
+  function validatephone3(phone)
+  	{
+  		
+  		//phone = phone.replace(/[^0-9]/g,'');
+  		$("#phonefield3").val(phone);
+  		if( phone == '' || !phone.match(/^[0-9][0-9]{3}$/) )
+  			{
+  				$("#phonefield3").css({'background':'#FFEDEF' , 'border':'solid 1px red'});
+  				$("#status").text("Wrong phone number.");
+				$("#status").css("color", "red");
+  				return false;
+  			}
+  		else
+  			{
+  				$("#phonefield3").css({'background':'#99FF99' , 'border':'solid 1px #99FF99'});
+				$("#status").text("Correct phone number.");
+				$("#status").css("color", "green");
+  			return true;	
+  			}
+  	}
+	
+	
+	
+  </script>
+ 
+</head>
+<body>
+  <h1> Phone number validation </h1>
+  
+  <form id="theform" action="" method="POST" >
+  <label> Phone number </label> <br/> <br/>
+  <input id="phonefield1" maxlength = "3" size = "4" type="text" value="" name="phone" onkeyup=" return validatephone1(this.value); " />&nbsp;<input id="phonefield2" size = "4" maxlength = "3" type="text" value="" name="phone" onkeyup=" return validatephone2(this.value); " />&nbsp;<input id="phonefield3" size = "4" maxlength = "4" type="text" value="" name="phone" onkeyup=" return validatephone3(this.value); " />
+   <div id = "status"></div>
+ 
+  </form>
+
+  
+</body>
+</html>
